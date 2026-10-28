@@ -1,0 +1,139 @@
+/* ===== EVARA — Contact page ===== */
+.ct-page{background:#f4f1ea}
+.ct-page .header{position:relative}
+.ct-page .header .nav-contact{text-decoration:none}
+
+/* hero with soft architectural grid */
+.ct-hero{position:relative;text-align:center;padding:96px var(--side) 72px;overflow:hidden}
+.ct-hero::before{content:"";position:absolute;inset:0;z-index:0;
+  background-image:linear-gradient(rgba(107,79,51,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(107,79,51,.07) 1px,transparent 1px);
+  background-size:88px 88px;background-position:center top;
+  -webkit-mask-image:radial-gradient(ellipse 70% 80% at 50% 30%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 70% 80% at 50% 30%,#000 30%,transparent 75%)}
+.ct-hero::after{content:"";position:absolute;left:50%;top:-140px;width:720px;height:420px;transform:translateX(-50%);z-index:0;background:radial-gradient(closest-side,rgba(217,204,182,.55),transparent);filter:blur(10px)}
+.ct-hero>*{position:relative;z-index:1}
+.ct-mark{width:56px;height:56px;margin:0 auto 28px;display:grid;place-items:center;border-radius:14px;background:#fbf9f5;border:1px solid rgba(34,34,34,.1);box-shadow:0 10px 24px -14px rgba(60,45,30,.35)}
+.ct-mark svg{width:30px;height:30px;fill:none;stroke:#6b4f33;stroke-width:1.6;stroke-linecap:round}
+.ct-hero h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,4.6vw,68px)!important;line-height:1.05;letter-spacing:-.05em;margin:0 0 16px;color:var(--ink)}
+.ct-hero p{margin:0 auto;max-width:520px;font-size:18px;line-height:1.6;color:#6c6f64}
+
+/* main: form + info cards */
+.ct-main{display:grid;grid-template-columns:1.35fr 1fr;gap:28px;margin:0 var(--side);align-items:start}
+.ct-box{background:#fbf9f5;border:1px solid rgba(34,34,34,.09);border-radius:14px;box-shadow:0 1px 2px rgba(60,45,30,.05)}
+.ct-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:10px;border:1px solid rgba(34,34,34,.12);background:#fff;box-shadow:0 1px 2px rgba(60,45,30,.06)}
+.ct-icon svg{width:20px;height:20px;fill:none;stroke:#3e3a34;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+.ct-form{padding:36px}
+.ct-form h2{font-family:var(--display)!important;font-size:28px!important;letter-spacing:-.035em!important;margin:20px 0 8px!important;color:var(--ink)}
+.ct-form>p{margin:0 0 28px;font-size:15px;line-height:1.6;color:#77786e}
+.ct-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ct-form label{display:block;margin-bottom:18px;font-size:13px;font-weight:500;color:#3e3a34}
+.ct-form input,.ct-form textarea,.ct-form select{display:block;width:100%;box-sizing:border-box;margin-top:8px;padding:12px 14px;border:1px solid rgba(34,34,34,.14);border-radius:10px;background:#fff;font:inherit;font-size:15px;font-weight:400;color:var(--ink);outline:none;box-shadow:0 1px 2px rgba(60,45,30,.05);transition:border-color .25s,box-shadow .25s}
+.ct-form textarea{min-height:130px;resize:vertical}
+.ct-form input:focus,.ct-form textarea:focus,.ct-form select:focus{border-color:#6b4f33;box-shadow:0 0 0 4px rgba(107,79,51,.12)}
+.ct-chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 20px}
+.ct-chips input{position:absolute;opacity:0;pointer-events:none}
+.ct-chips span{display:inline-block;padding:8px 14px;border:1px solid rgba(34,34,34,.14);border-radius:30px;background:#fff;font-size:13px;font-weight:400;color:#4a463f;cursor:pointer;transition:all .25s}
+.ct-chips input:checked+span{background:#6b4f33;border-color:#6b4f33;color:#f4f1ea}
+.ct-chips input:focus-visible+span{box-shadow:0 0 0 3px rgba(107,79,51,.25)}
+.ct-chips label{margin:0}
+.ct-submit{display:inline-flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:14px 20px;border:0;border-radius:40px;background:#6b4f33;color:#f4f1ea;font:inherit;font-size:15px;cursor:pointer;transition:background .3s}
+.ct-submit:hover{background:#4a3826}
+.ct-note{display:block;margin-top:12px;font-size:12px;line-height:1.5;color:#9a9387;text-align:center}
+
+.ct-cards{display:grid;gap:16px}
+.ct-card{padding:24px;display:grid;grid-template-columns:auto 1fr;gap:4px 18px;align-items:start}
+.ct-card .ct-icon{grid-row:span 3}
+.ct-card h3{margin:2px 0 2px;font-family:var(--display);font-weight:500;font-size:18px;letter-spacing:-.02em;color:var(--ink)}
+.ct-card p{margin:0 0 10px;font-size:14px;line-height:1.55;color:#77786e}
+.ct-card a,.ct-card b{font-size:15px;font-weight:500;color:#3e3226;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(107,79,51,.45)}
+.ct-card b{text-decoration:none}
+.ct-card a:hover{color:#6b4f33}
+
+/* FAQ */
+.ct-faq{max-width:760px;margin:0 auto;padding:var(--sy) 24px}
+.ct-faq h2{text-align:center;margin:0 0 12px!important}
+.ct-faq>p{text-align:center;margin:0 0 48px;font-size:16px;color:#77786e}
+.ct-q{display:grid;grid-template-columns:auto 1fr;gap:0 18px;padding:22px 0;border-bottom:1px solid rgba(34,34,34,.1)}
+.ct-q:first-of-type{border-top:1px solid rgba(34,34,34,.1)}
+.ct-q button{all:unset;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px;font-family:var(--display);font-size:18px;font-weight:500;letter-spacing:-.02em;color:var(--ink)}
+.ct-q button:focus-visible{outline:2px solid #6b4f33;outline-offset:4px;border-radius:6px}
+.ct-q button i{width:22px;height:22px;flex:none;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(34,34,34,.25);transition:transform .35s,background .3s,border-color .3s}
+.ct-q button i::before{content:"";width:7px;height:7px;border-right:1.5px solid #3e3a34;border-bottom:1.5px solid #3e3a34;transform:translateY(-2px) rotate(45deg)}
+.ct-q.open button i{transform:rotate(180deg);background:#6b4f33;border-color:#6b4f33}
+.ct-q.open button i::before{border-color:#f4f1ea}
+.ct-a{grid-column:2;display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.ct-a>div{overflow:hidden}
+.ct-a p{margin:0;padding-top:4px;font-size:15px;line-height:1.75;color:#5f594f}
+.ct-q.open .ct-a{grid-template-rows:1fr}
+
+/* closing band */
+.ct-band{margin:0 var(--side) var(--sy);padding:40px;border-radius:14px;background:#ebe5db;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.ct-band h3{margin:0 0 6px;font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:-.03em;color:var(--ink)}
+.ct-band p{margin:0;font-size:15px;color:#77786e}
+
+@media(max-width:1000px){.ct-main{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .ct-hero{padding:64px var(--side) 48px}
+  .ct-form{padding:22px}
+  .ct-row{grid-template-columns:1fr;gap:0}
+  .ct-band{padding:24px}
+}
+.ct-chips label{position:relative;overflow:hidden}
+.ct-chips input{left:0;top:0;width:1px;height:1px}
+main .ct-main form.ct-form h2:not(.x):not(.y){font-size:28px!important;line-height:1.2!important;margin:20px 0 8px!important}
+
+/* ===== Contact v2 — landscape hero + two-part card ===== */
+.cx-hero{position:relative;height:620px;margin-bottom:-300px;text-align:center;overflow:hidden}
+.cx-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.cx-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#f4f1ea 0%,rgba(244,241,234,.75) 22%,rgba(244,241,234,.15) 55%,rgba(244,241,234,.2) 78%,#f4f1ea 100%)}
+.cx-hero-in{position:relative;z-index:1;padding:80px var(--side) 0}
+.cx-hero .eyebrow{margin-bottom:16px!important}
+.cx-hero h1{font-family:var(--display);font-weight:400;font-size:clamp(40px,4.6vw,66px)!important;line-height:1.05;letter-spacing:-.05em;margin:0 0 18px;color:var(--ink)}
+.cx-hero p:not(.eyebrow){margin:0 auto;max-width:500px;font-size:17px;line-height:1.6;color:#4a463f}
+.cx-card{position:relative;z-index:2;margin:0 calc(var(--side) + 60px) var(--sy);display:grid;grid-template-columns:1fr 1fr;background:#fbf9f5;border-radius:18px;box-shadow:0 30px 70px -40px rgba(60,45,30,.4)}
+.cx-left,.cx-right{padding:40px}
+.cx-left{border-right:1px dashed rgba(34,34,34,.18)}
+main section h2.cx-h:not(.x):not(.y),main form h2.cx-h:not(.x):not(.y){font-size:28px!important;line-height:1.2!important;letter-spacing:-.035em!important;margin:0 0 28px!important;color:var(--ink)}
+.cx-tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cx-tile{display:flex;flex-direction:column;justify-content:space-between;min-height:190px;padding:16px;border:1px solid rgba(34,34,34,.08);border-radius:14px;background:#fff;color:inherit;transition:border-color .3s,transform .3s,box-shadow .3s}
+a.cx-tile:hover{border-color:rgba(107,79,51,.4);transform:translateY(-2px);box-shadow:0 14px 30px -20px rgba(60,45,30,.4)}
+.cx-ic{width:32px;height:32px;border-radius:8px;display:grid;place-items:center}
+.cx-ic svg{width:16px;height:16px;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cx-a{background:#efe4d6}.cx-a svg{stroke:#6b4f33}
+.cx-b{background:#e6e9dc}.cx-b svg{stroke:#58624c}
+.cx-c{background:#ece2dc}.cx-c svg{stroke:#8a5a44}
+.cx-d{background:#e9e4da}.cx-d svg{stroke:#4a463f}
+.cx-tile h3{margin:0 0 4px;font-family:var(--display);font-weight:500;font-size:17px;letter-spacing:-.02em;color:var(--ink)}
+.cx-tile p{margin:0;font-size:13px;line-height:1.5;color:#77786e}
+.cx-right label{display:block;margin-bottom:16px;font-size:12px;font-weight:500;color:#3e3a34}
+.cx-right input,.cx-right select,.cx-right textarea{display:block;width:100%;box-sizing:border-box;margin-top:7px;padding:12px 14px;border:1px solid rgba(34,34,34,.1);border-radius:10px;background:#fff;font:inherit;font-size:14px;font-weight:400;color:var(--ink);outline:none;transition:border-color .25s,box-shadow .25s}
+.cx-right textarea{min-height:120px;resize:vertical}
+.cx-right input:focus,.cx-right select:focus,.cx-right textarea:focus{border-color:#6b4f33;box-shadow:0 0 0 4px rgba(107,79,51,.12)}
+.cx-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cx-submit{display:flex;justify-content:space-between;align-items:center;width:100%;margin-top:8px;padding:6px 6px 6px 22px;border:0;border-radius:40px;background:#6b4f33;color:#f4f1ea;font:inherit;font-size:14px;cursor:pointer;transition:background .3s}
+.cx-submit i{width:36px;height:36px;border-radius:50%;background:#f4f1ea;color:#6b4f33;display:grid;place-items:center;transition:transform .4s}
+.cx-submit .ico{width:13px;height:13px}
+.cx-submit:hover{background:#4a3826}.cx-submit:hover i{transform:rotate(45deg)}
+.cx-note{display:block;margin-top:12px;font-size:11px;line-height:1.5;color:#9a9387}
+@media(max-width:1000px){.cx-card{margin-left:var(--side);margin-right:var(--side);grid-template-columns:1fr}.cx-left{border-right:0;border-bottom:1px dashed rgba(34,34,34,.18)}}
+@media(max-width:600px){.cx-hero{height:520px;margin-bottom:-220px}.cx-hero-in{padding-top:56px}.cx-left,.cx-right{padding:22px}.cx-tile{min-height:140px}.cx-row{grid-template-columns:1fr;gap:0}}
+.cx-hero{height:680px;margin-bottom:-280px}
+.cx-right select{height:46px;padding:0 14px}
+.cx-row label{margin-bottom:16px}
+@media(max-width:600px){.cx-hero{height:600px;margin-bottom:-170px}}
+/* 2. soft blurred mist over the top of the hero photo */
+.cx-hero::before{content:"";position:absolute;inset:0 0 auto 0;height:62%;z-index:0;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 45%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 45%,transparent 100%)}
+.cx-hero::after{z-index:0}
+/* 3. FAQ icon tiles in the primary colour */
+.ct-faq .ct-icon{background:#6b4f33;border-color:#6b4f33;box-shadow:none}
+.ct-faq .ct-icon svg{stroke:#f4f1ea}
+/* 4. dropdown: custom arrow 20px from the edge */
+.cx-right select{-webkit-appearance:none;appearance:none;padding:0 48px 0 20px;cursor:pointer;
+  background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b4f33' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 20px center/16px}
+.cx-right input,.cx-right textarea{padding-left:20px;padding-right:20px}
+/* 5. 120px between the contact card and the FAQ */
+.cx-card{margin-bottom:0!important}
+.ct-faq{padding-top:120px!important}
+@media(max-width:1100px){.ct-faq{padding-top:var(--sy)!important}}
+.cx-right select{height:49px}

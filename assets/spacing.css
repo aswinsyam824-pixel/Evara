@@ -1,0 +1,15 @@
+/* ===== Site-wide 120px side margins (desktop) ===== */
+:root{--side:120px}
+@media(max-width:1280px){:root{--side:64px}}
+@media(max-width:900px){:root{--side:24px}}
+@media(max-width:600px){:root{--side:18px}}
+.wrap,.sr-wrap,.phx-wrap{width:auto!important;max-width:none!important;margin-left:var(--side)!important;margin-right:var(--side)!important}
+.header .masthead.wrap{margin-left:var(--side)!important;margin-right:var(--side)!important}
+.header .nav-contact{right:0!important}
+.hero-copy{margin-left:var(--side)!important}
+@media(max-width:600px){.hero-copy{margin-right:var(--side)!important}}
+.expertise.ax.section.wrap{margin:0!important;padding:40px var(--side)!important}
+.ab-vision{margin-left:var(--side)!important;margin-right:var(--side)!important}
+.story-content{padding-right:var(--side)}
+@media(min-width:901px){.hero-render{right:var(--side)!important;width:calc(58% - var(--side))!important}
+.hero-render figcaption{margin-left:8%!important;margin-right:0!important}}
